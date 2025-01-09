@@ -10,12 +10,12 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
-    <title>Project</title>
+    <title>CatHome</title>
   </head>
 
   <body>
     <header class="header">
-      <div class="container header-container">
+      <div class="container logo-container">
         <img src="./img/cat.svg" alt="cat" class="logo" />
         <h1 class="label">Котодім</h1>
       </div>
@@ -25,7 +25,19 @@
         <ul class="posts">
           <li class="post">
             <a href="#">
-              <img src="./img/picture 1.png" alt="kitten" class="post-img" />
+              <picture>
+                <!-- For viewports wider than 768px -->
+                <source media="(min-width: 768px)" srcset="img/picture-1.png" />
+
+                <!-- For viewports between 320px and 768px -->
+                <source
+                  media="(min-width: 320px) and (max-width: 767px)"
+                  srcset="img/picture-1-small.png"
+                />
+
+                <!-- Fallback content -->
+                <img src="img/picture-1-small.png" alt="Description of Image" />
+              </picture>
               <div class="overlay">
                 <h2 class="post-title sub-title">
                   Коти та їхні чудові навички: від полювання до загадкових
@@ -185,14 +197,14 @@
             </ul>
           </div>
           <div class="video">
-            <h2 class="video-title title">Відео з пухнастиком</h2>
+            <h2 class="video-title title">Відео з пухнастиками</h2>
             <img src="./img/picture.png" alt="video" />
           </div>
         </section>
       </div>
     </main>
     <footer class="footer">
-      <div class="container">
+      <div class="container logo-container">
         <img src="./img/cat.svg" alt="cat" class="logo" />
         <h2 class="label">Котодім</h2>
       </div>
